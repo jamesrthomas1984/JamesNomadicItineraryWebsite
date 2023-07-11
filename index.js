@@ -1,6 +1,6 @@
 document.getElementById('theButton').onclick = buttonClick;
 
-function buttonClick() {
+async function buttonClick() {
     let resultsParagraph = document.getElementById('resultsParagraph');
 
     let response = await fetch('https://jsonplaceholder.typicode.com/todos/2');
