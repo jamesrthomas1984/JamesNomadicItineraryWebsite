@@ -1,6 +1,10 @@
 document.getElementById('theButton').onclick = buttonClick;
 
 function buttonClick() {
-    var resultsParagraph = document.getElementById('resultsParagraph');
-    resultsParagraph.innerText = 'Didnt really do anything';
+    let resultsParagraph = document.getElementById('resultsParagraph');
+
+    let response = await fetch('https://jsonplaceholder.typicode.com/todos/2');
+    let data = await response.json();
+
+    resultsParagraph.innerText = data;
 }
