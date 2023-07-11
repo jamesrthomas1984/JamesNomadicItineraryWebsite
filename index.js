@@ -6,5 +6,5 @@ async function buttonClick() {
     let response = await fetch('https://jsonplaceholder.typicode.com/todos/2');
     let data = await response.json();
 
-    resultsParagraph.innerText = data['Title'];
+    resultsParagraph.innerText = data['title'];
 }
